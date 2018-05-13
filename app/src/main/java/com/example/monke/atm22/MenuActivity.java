@@ -25,6 +25,8 @@ public class MenuActivity extends AppCompatActivity {
 
         super.onStart();
         user_acc = (Account) getIntent().getSerializableExtra("Account");
+
+        // Set account for this page
         TextView textElement = (TextView) findViewById(R.id.account);
         String account = Integer.toString(user_acc.getAccountNumber());
         textElement.setText(account);
@@ -43,6 +45,13 @@ public class MenuActivity extends AppCompatActivity {
     public void pageViewBalance(View view){
 
         startNext(new Intent(this, ViewBalanceActivity.class));
+
+    }
+
+
+    public void pageTransfer(View view){
+
+        startNext(new Intent(this, TransferActivity.class));
 
     }
 

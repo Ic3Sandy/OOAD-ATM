@@ -27,11 +27,22 @@ public class DepositActivity extends AppCompatActivity {
 
         super.onStart();
         user_acc = (Account) getIntent().getSerializableExtra("Account");
+
+        // Set account for this page
         TextView textElement = (TextView) findViewById(R.id.account);
         String account = Integer.toString(user_acc.getAccountNumber());
         textElement.setText(account);
 
     }
+
+    public void toMenu(){
+
+        Intent intent = new Intent(this, MenuActivity.class);
+        intent.putExtra("Account", (Serializable) user_acc);
+        startActivity(intent);
+
+    }
+
 
     public void deposit(int amount){
 
@@ -84,14 +95,6 @@ public class DepositActivity extends AppCompatActivity {
     public void pageMenu(View view){
 
         toMenu();
-
-    }
-
-    public void toMenu(){
-
-        Intent intent = new Intent(this, MenuActivity.class);
-        intent.putExtra("Account", (Serializable) user_acc);
-        startActivity(intent);
 
     }
 

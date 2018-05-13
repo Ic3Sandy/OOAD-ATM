@@ -26,20 +26,32 @@ public class ViewBalanceActivity extends AppCompatActivity {
 
         super.onStart();
         user_acc = (Account) getIntent().getSerializableExtra("Account");
-        TextView textElement1 = (TextView) findViewById(R.id.account);
-        TextView textElement2 = (TextView) findViewById(R.id.balance);
-        String account = Integer.toString(user_acc.getAccountNumber());
+
+        // Set balance for this page
+        TextView textElement_balance = (TextView) findViewById(R.id.balance);
         String balance = Integer.toString(user_acc.getBalance());
-        textElement1.setText(account);
-        textElement2.setText(balance);
+        textElement_balance.setText(balance);
+
+        // Set account for this page
+        TextView textElement_account = (TextView) findViewById(R.id.account);
+        String account = Integer.toString(user_acc.getAccountNumber());
+        textElement_account.setText(account);
+
+
+    }
+
+
+    public void toMenu(){
+
+        Intent intent = new Intent(this, MenuActivity.class);
+        intent.putExtra("Account", (Serializable) user_acc);
+        startActivity(intent);
 
     }
 
     public void pageMenu(View view){
 
-        Intent intent = new Intent(this, MenuActivity.class);
-        intent.putExtra("Account", (Serializable) user_acc);
-        startActivity(intent);
+        toMenu();
 
     }
 

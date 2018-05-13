@@ -52,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
 
             int account = Integer.parseInt(acc_num.getText().toString());
             int pass = Integer.parseInt(password.getText().toString());
+
             Bank bank = new Bank();
             Account user_acc = bank.checkAccount(account, pass, mybank);
 

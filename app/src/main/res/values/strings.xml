@@ -14,6 +14,7 @@
     <!--activity_menu-->
     <string name="act_menu_main_menu">Main menu</string>
     <string name="act_menu_view_my_balance">View my balance</string>
+    <string name="act_menu_transfer_money">Transfer money</string>
     <string name="act_menu_withdraw_cash">Withdraw cash</string>
     <string name="act_menu_deposit_funds">Deposit funds</string>
     <string name="act_menu_exit">Exit!</string>
@@ -22,6 +23,14 @@
     <string name="act_view_balance_your_balance">Your Balance!</string>
     <string name="act_view_balance_user_balance">9999</string>
     <string name="act_view_balance_menu">Menu</string>
+
+    <!--activity_transfer-->
+    <string name="act_transfer">Transfer Money</string>
+    <string name="act_transfer_enter_account_number">Enter account number: </string>
+    <string name="act_transfer_enter_amount">Enter amount: </string>
+    <string name="act_transfer_enter">Enter</string>
+    <string name="act_transfer_cancel">Cancel</string>
+
 
     <!--activity_deposit-->
     <string name="act_deposit_deposit_option">Deposit Option</string>
